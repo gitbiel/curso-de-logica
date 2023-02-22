@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 05</title>
+  </head>
+  <body>
+    <script>
+      // Pedir para digitar um número
+      let n1 = prompt("Digite um número");
+
+      // Converter em número inteiro
+      n1 = parseInt(n1);
+
+      // Pedir para digitar outro número
+      let n2 = prompt("Digite outro número");
+
+      // Converter em um número inteiro
+      n2 = parseInt(n2);
+
+      /* 
+        Mostrar num alert o seguinte texto 
+        o resto da dvisão de: (n1) e (n2) é: (resultado)  
+      */
+      let modulo = n1 % n2;
+      let exponenciacao = n1 ** n2;
+
+      alert("O resto da divisão de: " + n1 + " e " + n2 + " é " + modulo);
+
+      /* 
+        Mostrar num alert o seguinte texto 
+        o número (n1) elevado a (n2) é: (resultado)
+      */
+      alert(
+        "O número " + n1 + " elevado ao número " + n2 + " é " + exponenciacao
+      );
+
+      // outras maneiras
+
+      // alert(
+      //   "O número " + n1 + " elevado ao número " + n2 + " é " + (n1 ** n2)
+      // );
+      // alert(
+      //   "O número " + n1 + " elevado ao número " + n2 + " é " + n1 ** n2
+      // );
+    </script>
+  </body>
+</html>
