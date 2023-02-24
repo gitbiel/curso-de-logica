@@ -7,14 +7,40 @@
     <title>Aula 08</title>
   </head>
   <body>
+    <h1>Jogo da sorte</h1>
+    <p>Sorteamos um número entre 0 e 1</p>
+    <p>Se o número sorteado for 0, ganha o jogador que escolehr o número MENOR</p>
+    <p>Se o número sorteado for 1, ganha quem escolher o número MAIOR</p>
+    <p>Números iguais dão empate</p>
     <script>
+      // jogador 1 digitar um número
       let jogador1 = parseInt(prompt("Jogador 1, Digite um número"));
+      // jogador 2 digitar um número
       let jogador2 = parseInt(prompt("Jogador 2, Digite um número"));
 
+      // se os números forem iguais mostrar empate
       if (jogador1 == jogador2) {
         alert("Empate");
+      } else {
+        // se não der empate sortear um número entre 0 e 1
+        let numeroSorteado = parseInt(Math.random() * 2);
+        // Se o número sorteado for 0, ganha quem escolher o número MENOR
+        if (numeroSorteado === 0) {
+          if (jogador1 < jogador2) {
+            alert("O número sorteado foi 0 Quem ganhou foi o jogador 1");
+          } else {
+            alert("O número sorteado foi 0 Quem ganhou foi o jogador 2");
+          }
+        }
+        // Se o número sorteado for 1, Ganha quem escolher o número MAIOR 
+        if (numeroSorteado === 1) {
+          if (jogador1 > jogador2) {
+            alert("O número sorteado foi 1 Quem ganhou foi o jogador 1");
+          } else {
+            alert("O número sorteado foi 1 Quem ganhou foi o jogador 2");
+          }
+        }
       }
-      
     </script>
   </body>
 </html>
