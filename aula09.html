@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 09</title>
+  </head>
+  <body>
+    <h1>Média de notas</h1>
+    <p>
+      Simule que um aluno fará duas provas, se a média das duas notas for maior ou igual a 5 e nota 1 e 2 não for igual a zero, o aluno será aprovado 
+    </p>
+    <script>
+      let n1 = parseFloat(prompt("Digite um número"));
+      let n2 = parseFloat(prompt("Digite outro número"));
+
+      let notaMedia = (n1 + n2) / 2;
+
+      if (notaMedia >= 5 && n1 > 0 && n2 > 0) {
+        alert("Sua média foi " + notaMedia + " Você foi Aprovado");
+      } else {
+        alert("Sua média foi " + notaMedia + " Você foi reprovado");
+      } 
+      if (n1 == 0 || n2 == 0 ) {
+        alert("Você foi reprovado por uma nota ser igual a 0")
+      }
+    </script>
+  </body>
+</html>
