@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 011</title>
+  </head>
+  <body>
+    <script>
+      // jogador 1 digitar um número
+      let jogador1 = parseInt(prompt("Jogador 1, Digite um número"));
+      // jogador 2 digitar um número
+      let jogador2 = parseInt(prompt("Jogador 2, Digite um número"));
+
+      if (jogador1 === jogador2) {
+        alert("Empate");
+      } else {
+        // se não der empate sortear um número entre 0 e 1
+        let numeroSorteado = parseInt(Math.random() * 2);
+        alert("O número sorteado foi: " + numeroSorteado);
+        // Se o número sorteado for 0, ganha quem escolher o número MENOR
+        if (
+          (numeroSorteado === 0 && jogador1 < jogador2) ||
+          (numeroSorteado === 1 && jogador1 > jogador2)
+        ) {
+          alert("Ganhou o jogador 1");
+        } else {
+          alert("Ganhou o jogador 2");
+        }
+      }
+    </script>
+  </body>
+</html>
