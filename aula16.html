@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 16</title>
+  </head>
+  <body>
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+    <button onclick="limparTabuada()">Limpar tabuada</button>
+    <div id="output"></div>
+
+    <script>
+      function mostrarTabuada() {
+        let output = document.querySelector("#output");
+        let mensagem = "";
+
+        // Perguntar o número para o usuário
+        let numero = prompt("Digite um número");
+        numero = parseInt(numero);
+
+        limparTabuada();
+        // Criar váriavel que servirá de indice
+        let i = 1;
+
+        // Enquanto indice <= 100 concatena na variável mensagem
+        while (i <= 10) {
+          mensagem += numero + " x " + i + " = " + numero * i + " <br>";
+          i++;
+        }
+
+        output.innerHTML = mensagem;
+        // Mostra mensagem no output
+      }
+
+      function limparTabuada() {
+        mensagem = "";
+        output.innerHTML = mensagem;
+      }
+    </script>
+  </body>
+</html>
